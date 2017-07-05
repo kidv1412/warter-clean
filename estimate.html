@@ -1,0 +1,468 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="水质监测大数据平台" />
+		<meta name="description" content="水质监测大数据平台" />
+		<meta name="robots" content="all" />
+		<meta name="author" content="浙江农林大学信息工程实验室" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>水质监测大数据平台</title>
+		<link rel="stylesheet" href="../../cssnew1/ie7.css" />
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+		<link href="css/style.css" rel="stylesheet" />
+		<link href="css/reset.css" rel="stylesheet" />
+		<link href="css/font-awesome.min.css" rel="stylesheet" />
+		<link href="css/flexslider.css" rel="stylesheet" />
+		<link href="css/bootstrap1.css" rel="stylesheet">
+		<!--[if lte IE 7]>
+		<link rel="stylesheet" href="css/font-awesome-ie7.min.css" />
+	<![endif]-->
+		<!--[if lt IE 9]>
+		<script src="js/respond.min.js"></script>
+	<![endif]-->
+		<script src="js/jquery.js"></script>
+		<!-- jQ -->
+		<script src="js/jquery.flexslider-min.js"></script>
+		<!-- banner slider -->
+		<script src="js/base.js"></script>
+		<!-- callback -->
+		<script language="javascript" src="../js/esl.js" type="text/javascript"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<!-- 	对话框 -->
+		<div id="dlWin" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static"></div>
+		<!-- header -->
+		<div id="wrapper">
+			<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+			<html>
+
+			<head>
+			</head>
+
+			<body>
+				<!-- header -->
+				<div class="login-content">
+					<div class="login clearfix">
+						<div class="input-group fr">
+							<form method="post">
+								<input type="text" name="username" placeholder="用户名" value="用户名" onfocus="if(value=='用户名') {value=''}" onblur="if (value=='') {value='用户名'}" />
+								<input type="password" name="password" placeholder="密码" />
+								<input type="submit" name="submit" value="登录" />
+							</form>
+						</div>
+						<a href="#" class="reg fr">注册</a>
+					</div>
+				</div>
+				<div class="header-content">
+					<div class="header clearfix">
+						<h2 class="fl logo"><a href="../index.html" />农林水质监测数据平台</a></h2>
+						<ul class="fl menu">
+							<li>
+								<a href="../About/ptjs.jsp">关于我们</a>
+							</li>
+							<li>
+								<a href="../News/newslist.jsp">平台资讯</a>
+							</li>
+							<li>
+								<a href="../Single/single-main.jsp">大数据系统</a>
+							</li>
+							<li>
+								<a href="../Chengguo/cpzslist.jsp">科研成果</a>
+							</li>
+							<li>
+								<a href="../Consult/zxjl.jsp">综合服务</a>
+							</li>
+							<li>
+								<a href="../Company/dy.jsp">示范企业</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<script>
+					var _hmt = _hmt || [];
+					(function() {
+						var hm = document.createElement("script");
+						hm.src = "//hm.baidu.com/hm.js?b2c9ea139e05be83cf363ff62efc206d";
+						var s = document.getElementsByTagName("script")[0];
+						s.parentNode.insertBefore(hm, s);
+					})();
+				</script>
+
+				<script>
+					var _hmt = _hmt || [];
+					(function() {
+						var hm = document.createElement("script");
+						hm.src = "//hm.baidu.com/hm.js?2b2c58f2b0cac307e6e3635453d3a2cc";
+						var s = document.getElementsByTagName("script")[0];
+						s.parentNode.insertBefore(hm, s);
+					})();
+				</script>
+
+			</body>
+
+			</html>
+			<!-- single -->
+			<div class="single-content">
+				<div class="single clearfix">
+					<div class="sidebar fl">
+						<h2 class="title">
+					<i class="fa fa-laptop"></i>大数据系统
+				</h2>
+						<ul class="cage-name">
+							<li>
+								<a href="index.html"><i class="fa fa-plus-square-o"></i>数据采集</a>
+							</li>
+							<li>
+								<a href="index.html"><i class="fa fa-plus-square-o"></i>挖掘分析</a>
+							</li>
+							<li>
+								<a href="index.html"><i class="fa fa-plus-square-o"></i>监控预警</a>
+							</li>
+							<li>
+								<a href="index.html"><i class="fa fa-plus-square-o"></i>决策服务</a>
+							</li>
+							<li>
+								<a href="index.html"><i class="fa fa-plus-square-o"></i>效益评估</a>
+								<ul>
+									<li id="hgjc">
+										<a class="lv2" href="#">宏观决策评估</a>
+									</li>
+									<li id="scjc">
+										<a class="lv2" href="#">生产效益评估</a>
+									</li>
+									<li id="kyjc">
+										<a class="lv2" href="#">科研效益评估</a>
+									</li>
+									<li>
+										<a class="lv2" href="#">社会效益评估</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+
+					<div class="content fl">
+						<div class="position">
+							<a href="../../index.jsp">首页</a><i class="fa fa-angle-right"></i>
+							<a href="estimate.jsp">效益评估</a>
+						</div>
+						<div class="content-info">
+							<div class="post-content" style="min-height: 540px;">
+								<div style="margin-top: 10px;  font-size: 20px; line-height: 36px;margin-right: 30px;">
+									<p style="text-indent: 2em">
+										对项目进行全面系统的回顾和总结，并将项目实施过程及项目完成后的最终成果和影响和项目决策时确定的各项计划和目标进行全面系统的对比，找出差异，分析原因，得出经验教训，提出改进建议，反馈决策者。</p>
+									<p style="text-indent: 2em">
+										为政府部门宏观决策、科研院所科学实验、一线生产单位管理提供效益评估。</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+			<html>
+
+			<body>
+				<div class="footer-content">
+					<div class="footer clearfix">
+						<div class="fl left">
+							<ul class="footer-menu clearfix">
+								<li class="fl">
+									<select class="lang" onChange="javascript:window.open(this.options[this.selectedIndex].value);this.selectedIndex=0">
+										<option value="" selected="selected">政府机构网站<i class="fa fa-angle-right"></i></option>
+										<option value="http://www.most.gov.cn">+ 科技部</option>
+										<option value="http://www.moa.gov.cn/">+ 农业部</option>
+										<option value="http://www.zjkjt.gov.cn/">+ 浙江省科技厅</option>
+									</select>
+								</li>
+								<li class="fl">
+									<select class="lang" onChange="javascript:window.open(this.options[this.selectedIndex].value);this.selectedIndex=0">
+										<option value="" selected="selected">科研院所网站<i class="fa fa-angle-right"></i></option>
+										<option value="http://www.zjfc.edu.cn/">+ 浙江农林大学</option>
+										<option value="http://www.cas.cn/">+ 中国科学院</option>
+										<option value="http://www.caas.net.cn/">+ 中国农业科学院</option>
+									</select>
+								</li>
+								<li class="fl">
+									<select class="lang" onChange="javascript:window.open(this.options[this.selectedIndex].value);this.selectedIndex=0">
+										<option value="" selected="selected">常用相关网站<i class="fa fa-angle-right"></i></option>
+										<option value="http://www.agri.gov.cn/" target="blank">+ 中国农业信息网</option>
+										<option value="http://www.zjwater.com/">+ 浙江水利</option>
+										<option value="http://www.zjweu.edu.cn/">+ 浙江水利水电学院</option>
+									</select>
+								</li>
+							</ul>
+							<p class="copyright">这里是IPC备号　&copy;版权所有 浙江农林大学
+								<a href="#"> </a>
+							</p>
+						</div>
+						<div class="fl right">
+							<ul class="footer-menu">
+								<li class="fl address">
+										<p>　　　　　　浙江农林大学智能监测技术实验室　</p>
+									</a>
+									<p>　　　　　　地址：浙江杭州临安环城北路88号</p>
+								</li>
+								<li class="fl sns">
+									<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1172634092&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:1172634092:51" alt="点击这里给我发消息" title="点击这里给我发消息" /></a>
+									<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1172634092&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:1172634092:51" alt="点击这里给我发消息" title="点击这里给我发消息" /></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</body>
+
+			</html>
+
+			<script type="text/javascript">
+				$('#hgjc').bind('click', function() {
+					var userid = "null";
+					if(userid != "null")
+						window.location = "hgestimate.jsp";
+					var sendmail =
+						'<div class="modal-header winHeader">' +
+						'<h3 style="font-size:18px;">请登录：</h3>' +
+						'</div>' +
+						'<div class="modal-body">' +
+						'<form id="doform" class="form-horizontal">'
+
+						+
+						'<div >' +
+						'<label style="width:100px;margin-left:40px;font-size:16px;" for="usename">用户名:</label>' +
+						'<input type="text" id="usename" style="margin-left:36px;width:260px;border:1px solid #ccc;">' +
+						'</div>'
+
+						+
+						'<div style="margin-top:3px;">' +
+						'<label style="width:100px;margin-left:40px;font-size:16px;"  for="password">密码:</label>' +
+						'<input type="password" id="password" style="margin-left:52px;width:260px;border:1px solid #ccc;" >' +
+						'</div>'
+
+						+
+						'</form>' +
+						'</div>' +
+						'<div class="modal-footer">' +
+						'<button id = "dengluWin" class="btn btn-success" style="width:60px;height:30px;font-size:16px;">登录</button>' +
+						'<button id = "closeWin" class="btn"  style="width:60px;height:30px;font-size:16px;">关闭</button>'
+
+						+
+						'</div>';
+					$('#dlWin').html(sendmail);
+					$('#dlWin').modal('show');
+
+					//弹出框关闭按钮单击事件绑定
+					//弹出框关闭按钮单击事件绑定
+					$('#closeWin').unbind();
+					$('#closeWin').bind('click', function() {
+						$('#dlWin').modal('hide');
+						$('#dlWin').empty();
+						window.location = "estimate.jsp";
+					});
+
+					//弹出框处理按钮单击事件绑定
+					$('#dengluWin').unbind();
+					$('#dengluWin').bind('click', function() {
+
+						var usename = $('#usename').val();
+						var password = $('#password').val();
+
+						jQuery.ajax({
+							type: "post",
+							cache: false,
+							async: false,
+							url: '../../loginbd.action',
+							timeout: 60000000, //设置请求超时时间（毫秒）。此设置将覆盖全局设置。
+							dataType: "json", //
+							data: {
+								'username': usename,
+								'password': password
+							},
+							success: function(data, textStatus) {
+								if(data.bduser == null)
+									alert("用户名或密码错误");
+								else {
+									window.location = "hgestimate.jsp";
+								}
+							},
+							error: function(jqXHR, textStatus, errorThrown) {
+								$('#dlWin').modal('hide');
+								$('#dlWin').empty();
+								alert("登录失败，请联系管理员！");
+							}
+						});
+
+					});
+
+				});
+
+				$('#kyjc').bind('click', function() {
+					var userid = "null";
+					if(userid != "null")
+						window.location = "kyestimate.jsp";
+					var sendmail =
+						'<div class="modal-header winHeader">' +
+						'<h3 style="font-size:18px;">请登录：</h3>' +
+						'</div>' +
+						'<div class="modal-body">' +
+						'<form id="doform" class="form-horizontal">'
+
+						+
+						'<div >' +
+						'<label style="width:100px;margin-left:40px;font-size:16px;" for="usename">用户名:</label>' +
+						'<input type="text" id="usename" style="margin-left:36px;width:260px;border:1px solid #ccc;">' +
+						'</div>'
+
+						+
+						'<div style="margin-top:3px;">' +
+						'<label style="width:100px;margin-left:40px;font-size:16px;"  for="password">密码:</label>' +
+						'<input type="password" id="password" style="margin-left:52px;width:260px;border:1px solid #ccc;" >' +
+						'</div>'
+
+						+
+						'</form>' +
+						'</div>' +
+						'<div class="modal-footer">' +
+						'<button id = "dengluWin" class="btn btn-success" style="width:60px;height:30px;font-size:16px;">登录</button>' +
+						'<button id = "closeWin" class="btn"  style="width:60px;height:30px;font-size:16px;">关闭</button>'
+
+						+
+						'</div>';
+					$('#dlWin').html(sendmail);
+					$('#dlWin').modal('show');
+
+					//弹出框关闭按钮单击事件绑定
+					//弹出框关闭按钮单击事件绑定
+					$('#closeWin').unbind();
+					$('#closeWin').bind('click', function() {
+						$('#dlWin').modal('hide');
+						$('#dlWin').empty();
+						window.location = "estimate.jsp";
+					});
+
+					//弹出框处理按钮单击事件绑定
+					$('#dengluWin').unbind();
+					$('#dengluWin').bind('click', function() {
+
+						var usename = $('#usename').val();
+						var password = $('#password').val();
+
+						jQuery.ajax({
+							type: "post",
+							cache: false,
+							async: false,
+							url: '../../loginbd.action',
+							timeout: 60000000, //设置请求超时时间（毫秒）。此设置将覆盖全局设置。
+							dataType: "json", //
+							data: {
+								'username': usename,
+								'password': password
+							},
+							success: function(data, textStatus) {
+								if(data.bduser == null)
+									alert("用户名或密码错误");
+								else {
+									window.location = "kyestimate.jsp";
+								}
+							},
+							error: function(jqXHR, textStatus, errorThrown) {
+								$('#dlWin').modal('hide');
+								$('#dlWin').empty();
+								alert("登录失败，请联系管理员！");
+							}
+						});
+
+					});
+
+				});
+
+				$('#scjc').bind('click', function() {
+					var userid = "null";
+					if(userid != "null")
+						window.location = "scestimate.jsp";
+					var sendmail =
+						'<div class="modal-header winHeader">' +
+						'<h3 style="font-size:18px;">请登录：</h3>' +
+						'</div>' +
+						'<div class="modal-body">' +
+						'<form id="doform" class="form-horizontal">'
+
+						+
+						'<div >' +
+						'<label style="width:100px;margin-left:40px;font-size:16px;" for="usename">用户名:</label>' +
+						'<input type="text" id="usename" style="margin-left:36px;width:260px;border:1px solid #ccc;">' +
+						'</div>'
+
+						+
+						'<div style="margin-top:3px;">' +
+						'<label style="width:100px;margin-left:40px;font-size:16px;"  for="password">密码:</label>' +
+						'<input type="password" id="password" style="margin-left:52px;width:260px;border:1px solid #ccc;" >' +
+						'</div>'
+
+						+
+						'</form>' +
+						'</div>' +
+						'<div class="modal-footer">' +
+						'<button id = "dengluWin" class="btn btn-success" style="width:60px;height:30px;font-size:16px;">登录</button>' +
+						'<button id = "closeWin" class="btn"  style="width:60px;height:30px;font-size:16px;">关闭</button>'
+
+						+
+						'</div>';
+					$('#dlWin').html(sendmail);
+					$('#dlWin').modal('show');
+
+					//弹出框关闭按钮单击事件绑定
+					//弹出框关闭按钮单击事件绑定
+					$('#closeWin').unbind();
+					$('#closeWin').bind('click', function() {
+						$('#dlWin').modal('hide');
+						$('#dlWin').empty();
+						window.location = "estimate.jsp";
+					});
+
+					//弹出框处理按钮单击事件绑定
+					$('#dengluWin').unbind();
+					$('#dengluWin').bind('click', function() {
+
+						var usename = $('#usename').val();
+						var password = $('#password').val();
+
+						jQuery.ajax({
+							type: "post",
+							cache: false,
+							async: false,
+							url: '../../loginbd.action',
+							timeout: 60000000, //设置请求超时时间（毫秒）。此设置将覆盖全局设置。
+							dataType: "json", //
+							data: {
+								'username': usename,
+								'password': password
+							},
+							success: function(data, textStatus) {
+								if(data.bduser == null)
+									alert("用户名或密码错误");
+								else {
+									window.location = "scestimate.jsp";
+								}
+							},
+							error: function(jqXHR, textStatus, errorThrown) {
+								$('#dlWin').modal('hide');
+								$('#dlWin').empty();
+								alert("登录失败，请联系管理员！");
+							}
+						});
+
+					});
+
+				});
+			</script>
+	</body>
+
+</html>
