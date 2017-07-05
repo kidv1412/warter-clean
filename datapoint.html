@@ -12,6 +12,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<title>水质监测大数据平台</title>
 
+		<link rel="stylesheet" type="text/css" href="css/datapoint.css" />
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		<link rel="stylesheet" type="text/css" href="css/flex.css" />
 		<!--[if lte IE 7]>
 		<link rel="stylesheet" href="css/font-awesome-ie7.min.css" />
 	<![endif]-->
@@ -26,228 +29,35 @@
 		<script src="js/echarts.js" type="text/javascript"></script>
 	</head>
 
-	<body>
-		<!-- single -->
-		<div class="single-content">
-			<div class="single clearfix">
-				<div class="sidebar fl">
-					<!--左边导航-->
-					<div class="htmleaf-container center">
-
-						<div class="htmleaf-content bgcolor-3" style="height: 100%;">
-							<!-- This is mtree list -->
-							<ul class=mtree>
-								<li>
-									<a href="#">东湖监测区</a>
-									<ul>
-										<li>
-											<a href="#" id="d001">D001</a>
-										</li>
-										<li>
-											<a href="#">D002</a>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<a href="#">西径监测区</a>
-									<ul>
-										<li>
-											<a href="#">X001</a>
-									</ul>
-									<li>
-										<a href="#">官塘监测区</a>
-										<ul>
-											<li>
-												<a href="#">G001</a>
-											</li>
-										</ul>
-									</li>
-						</div>
-					</div>
-
-					<script src='js/stopExecutionOnTimeout.js?t=1'></script>
-					<script src='http://www.jq22.com/jquery/jquery-1.10.2.js'></script>
-					<script src='js/jquery.velocity.min.js'></script>
-					<script>
-						$('#d001').click(function() {
-
-						});
-
-						(function($, window, document, undefined) {
-							if($('ul.mtree').length) {
-								var collapsed = true;
-								var close_same_level = false;
-								var duration = 400;
-								var listAnim = true;
-								var easing = 'easeOutQuart';
-								$('.mtree ul').css({
-									'overflow': 'hidden',
-									'height': collapsed ? 0 : 'auto',
-									'display': collapsed ? 'none' : 'block'
-								});
-								var node = $('.mtree li:has(ul)');
-								node.each(function(index, val) {
-									$(this).children(':first-child').css('cursor', 'pointer');
-									$(this).addClass('mtree-node mtree-' + (collapsed ? 'closed' : 'open'));
-									$(this).children('ul').addClass('mtree-level-' + ($(this).parentsUntil($('ul.mtree'), 'ul').length + 1));
-								});
-								$('.mtree li > *:first-child').on('click.mtree-active', function(e) {
-									if($(this).parent().hasClass('mtree-closed')) {
-										$('.mtree-active').not($(this).parent()).removeClass('mtree-active');
-										$(this).parent().addClass('mtree-active');
-									} else if($(this).parent().hasClass('mtree-open')) {
-										$(this).parent().removeClass('mtree-active');
-									} else {
-										$('.mtree-active').not($(this).parent()).removeClass('mtree-active');
-										$(this).parent().toggleClass('mtree-active');
-									}
-								});
-								node.children(':first-child').on('click.mtree', function(e) {
-									var el = $(this).parent().children('ul').first();
-									var isOpen = $(this).parent().hasClass('mtree-open');
-									//同级关闭
-									var close_items = $(this).closest('ul').children('.mtree-open').not($(this).parent()).children('ul');
-									if($.Velocity) {
-										close_items.velocity({
-											height: 0
-										}, {
-											duration: duration,
-											easing: easing,
-											display: 'none',
-											delay: 100,
-											complete: function() {
-												setNodeClass($(this).parent(), true);
-											}
-										});
-									}
-									el.css({
-										'height': 'auto'
-									});
-									if(!isOpen && $.Velocity && listAnim)
-										el.find(' > li, li.mtree-open > ul > li').css({
-											'opacity': 0
-										}).velocity('stop').velocity('list');
-									if($.Velocity) {
-										el.velocity('stop').velocity({
-											height: isOpen ? [
-												0,
-												el.outerHeight()
-											] : [
-												el.outerHeight(),
-												0
-											]
-										}, {
-											queue: false,
-											duration: duration,
-											easing: easing,
-											display: isOpen ? 'none' : 'block',
-											begin: setNodeClass($(this).parent(), isOpen),
-											complete: function() {
-												if(!isOpen)
-													$(this).css('height', 'auto');
-											}
-										});
-									} else {
-										setNodeClass($(this).parent(), isOpen);
-										el.slideToggle(duration);
-									}
-									e.preventDefault();
-								});
-
-								function setNodeClass(el, isOpen) {
-									if(isOpen) {
-										el.removeClass('mtree-open').addClass('mtree-closed');
-									} else {
-										el.removeClass('mtree-closed').addClass('mtree-open');
-									}
-								}
-								if($.Velocity && listAnim) {
-									$.Velocity.Sequences.list = function(element, options, index, size) {
-										$.Velocity.animate(element, {
-											opacity: [
-												1,
-												0
-											],
-											translateY: [
-												0, -(index + 1)
-											]
-										}, {
-											delay: index * (duration / size / 2),
-											duration: duration,
-											easing: easing
-										});
-									};
-								}
-								if($('.mtree').css('opacity') == 0) {
-									if($.Velocity) {
-										$('.mtree').css('opacity', 1).children().css('opacity', 0).velocity('list');
-									} else {
-										$('.mtree').show(200);
-									}
-								}
-							}
-						}(jQuery, this, this.document));
-						$(document).ready(function() {
-							var mtree = $('ul.mtree');
-							mtree.addClass('jet');
-						});
-					</script>
-
-				</div>
-				<div class="content" style="width: auto;height: 680px;background: #EEF1F7; box-shadow: none;">
-					<!--右边地图-->
-					<div id="container"></div>
-					<script type="text/javascript">
-						function initialize() {
-							// 编写自定义函数，创建标注  
-
-							function addMarker(point) {
-								//var myIcon = new BMap.Icon("http://api.map.baidu.com/images/marker_red_sprite.png", new BMap.Size(50, 50));
-								// 创建标注  
-								var marker = new BMap.Marker(point);
-								var opts = {
-									width: 30, // 信息窗口宽度   
-									height: 30, // 信息窗口高度    
-									title: "设备信息" // 信息窗口标题   
-								};
-								//	var infoWindow = new BMap.InfoWindow($("#infowindow").html(), opts); // 创建信息窗口对象   
-								var infoWindow = new BMap.InfoWindow("djsalfjlkdas", opts);
-								marker.addEventListener("mouseover", function() {
-									marker.openInfoWindow(infoWindow);
-								});
-								//									marker.addEventListener("mouseout", function() {
-								//										marker.closeInfoWindow();
-								//									});
-								marker.addEventListener("click", function() {
-									alert("您点击了标注");
-								});
-								map.addOverlay(marker); // 将标注添加到地图中
-								marker
-								//打印坐标点
-								var p = marker.getPosition();
-								var lng = p.lng;
-								var lat = p.lat;
-								console.log(lng + "," + lat);
-							}
-							// 百度地图API功能
-							var map = new BMap.Map("container"); //创建地图实例
-							map.centerAndZoom(new BMap.Point(116.404, 39.91), 19); // 初始化地图,设置中心点坐标和地图级别
-							map.addControl(new BMap.MapTypeControl()); //添加地图类型控件
-							map.enableScrollWheelZoom(true); //开启鼠标滚轮缩放
-							map.setMapType(BMAP_SATELLITE_MAP);
-							addMarker(new BMap.Point(116.404, 39.91));
-
-						}
-
-						function loadScript() {
-							var script = document.createElement("script");
-							script.src = "http://api.map.baidu.com/api?v=2.0&ak=Q7dkbNcmGpXwgH9KmHaVvhEXPGDWPXV6&callback=initialize"; //此 为v2.0版本的引用方式 
-							document.body.appendChild(script);
-						}
-						window.onload = loadScript;
-					</script>
-				</div>
+	<body class="main">
+		<div class="head flex-h flex-hc flex-vc">
+			<!--导航栏-->
+			<div class="content flex-h flex-hc flex-vc flex-hsb">
+				<h2 class="logo"><a href="index.html">水质监测大数据平台</a></h2>
+				<ul class="menu flex-h">
+					<li>
+						<a href="index.html">关于我们</a>
+					</li>
+					<li>
+						<a href="index.html">平台资讯</a>
+					</li>
+					<li>
+						<a href="index.html">大数据系统</a>
+					</li>
+					<li>
+						<a href="index.html">科研成果</a>
+					</li>
+					<li>
+						<a href="index.html">综合服务</a>
+					</li>
+					<li>
+						<a href="index.html">示范企业</a>
+					</li>
+				</ul>
 			</div>
+
+			<!--定位坐标选择器-->
+			<div></div>
 		</div>
 	</body>
 
