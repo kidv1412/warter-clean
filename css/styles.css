@@ -197,7 +197,7 @@ ul.mtree.jet li > a:hover {
   color: #FFF;
 }
 ul.mtree.jet a {
-  padding: 5px 0px 5px 1em;
+  padding: 5px 0px 5px 0;
 }
 ul.mtree.jet li li > a {
   padding-left: 2em;
