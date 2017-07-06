@@ -2,7 +2,9 @@ body {
 	margin: 0;
 	padding: 0;
 }
-
+div{
+	font-family: "microsoft yahei", "微软雅黑", Arial, Helvetica, sans-serif;
+}
 a {
 	color: #484848;
 	text-decoration: none;
@@ -80,6 +82,8 @@ h2.title {
 .chart{
 	display: none;
 	position: absolute;
+	width: 800px;
+	height: 600px;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -93,7 +97,6 @@ h2.title {
 	width: 100%;
 	height: 100%;
 	left: 0;
-	top: 147px;
 	background: #000000;
 	opacity: 0.8;
 	z-index: 100000;
